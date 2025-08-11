@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Calle, Ph.D.</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 400;
+            transition: opacity 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            opacity: 0.6;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            padding: 6rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-content {
+            padding: 2rem 0;
+        }
+        
+        .hero-label {
+            font-size: 1rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #000;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        
+        .hero-image {
+            position: relative;
+            height: 500px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-image-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 1rem;
+            color: #999;
+            background: #f8f8f8;
+        }
+        
+        /* Second Hero (Coder Section) */
+        .hero-alt {
+            background: #000;
+            color: #fff;
+            padding: 4rem 2rem;
+        }
+        
+        .hero-alt .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .hero-alt .hero-label {
+            color: #999;
+        }
+        
+        .hero-alt .hero-title {
+            color: #fff;
+        }
+        
+        .hero-alt .hero-subtitle {
+            color: #ccc;
+        }
+        
+        .code-block {
+            background: #111;
+            padding: 2rem;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            color: #fff;
+            border: 1px solid #333;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 6rem 2rem;
+            background: #fff;
+        }
+        
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #000;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .portfolio-item {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-image {
+            height: 250px;
+            background: #f8f8f8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .portfolio-image-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #999;
+            font-size: 1rem;
+        }
+        
+        .portfolio-content {
+            padding: 2rem;
+        }
+        
+        .portfolio-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-category {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-description {
+            color: #333;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .portfolio-link {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #000;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            opacity: 0.6;
+        }
+        
+        /* Bio Section */
+        .bio {
+            padding: 6rem 2rem;
+            background: #f8f8f8;
+        }
+        
+        .bio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .bio-text {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #000;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+        
+        .bio-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 200;
+            color: #000;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: #000;
+            color: #fff;
+        }
+        
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .contact-link:hover {
+            background: #fff;
+            color: #000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 4rem 1rem 2rem;
+            }
+            
+            .hero-alt .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .portfolio,
+            .bio,
+            .contact {
+                padding: 4rem 1rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .bio-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">LC</a>
+            <ul class="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#bio">research</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="mailto:leonardo.meiji@gmail.com">✉</a>
+                <a href="https://github.com/lcalle" target="_blank">⚡</a>
+                <a href="https://www.linkedin.com/in/leonardo-calle-5865b3234/" target="_blank">⚭</a>
+                <a href="https://instagram.com/calle_meiji" target="_blank">📷</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-label">scientist</div>
+            <h1 class="hero-title">Leonardo Calle, Ph.D.</h1>
+            <p class="hero-subtitle">Ph.D. scientist-entrepreneur developing technology solutions for ecological decision-making, scientific workforce analytics, and artistic expression.</p>
+        </div>
+        
+        <div class="hero-image">
+            <img src="hero-portrait.png" alt="Leonardo Calle" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+            <div class="hero-image-placeholder">Add "hero-portrait.png" to display your photo</div>
+        </div>
+    </section>
+
+    <!-- Coder Section -->
+    <section class="hero-alt">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">&lt;builder&gt;</div>
+                <h2 class="hero-title">Entrepreneur</h2>
+                <p class="hero-subtitle">Founder building AI-powered platforms for environmental science and climate solutions.</p>
+            </div>
+            
+            <div class="code-block">
+const impact = {<br>
+&nbsp;&nbsp;research: "17 publications",<br>
+&nbsp;&nbsp;ventures: "3 companies",<br>
+&nbsp;&nbsp;mission: "climate.solve()",<br>
+&nbsp;&nbsp;focus: ["AI/ML", "Earth Systems", "Innovation"]<br>
+};
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <div class="section-header">
+                <div class="section-title">Some of my latest work</div>
+                <h2 class="section-heading">Current Ventures</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="calleecology-pre.png.png" alt="CalleEcology" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="portfolio-image-placeholder">Add "calleecology-preview.png"</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">CalleEcology Inc.</h3>
+                        <div class="portfolio-category">Data Solutions</div>
+                        <p class="portfolio-description">Environmental data solutions and consulting services combining ecological modeling, subscription datasets, and workforce development for government agencies and private sector clients.</p>
+                        <a href="https://calleecology.com" class="portfolio-link">Visit Site</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="mewmewmew-preview.png" alt="mewmewmew" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="portfolio-image-placeholder">Add "mewmewmew-preview.png"</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">mewmewmew Inc.</h3>
+                        <div class="portfolio-category">Workforce Intelligence Platform</div>
+                        <p class="portfolio-description">AI-powered workforce marketplace connecting organizations with specialized scientific and environmental consultants, featuring automated project matching, compliance validation, and enterprise workforce analytics for data-driven hiring decisions.</p>
+                        <a href="https://mewjobs.com" class="portfolio-link">Visit Platform</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="calle-arte-preview.png" alt="Calle Arte" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="portfolio-image-placeholder">Add "calle-arte-preview.png"</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Creative Portfolio</h3>
+                        <div class="portfolio-category">Art Studio & Design</div>
+                        <p class="portfolio-description">My art studio, where I specialize in blue pen drawings and custom murals that invite people to see the world from new perspectives—creating original works, prints, and wall art that challenge perception and foster human connection through accessible, transformative art.</p>
+                        <a href="https://calle-arte.com/drawings/" class="portfolio-link">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio" id="bio">
+        <div class="bio-container">
+            <div class="section-header">
+                <div class="section-title">About</div>
+                <h2 class="section-heading">Research & Impact</h2>
+            </div>
+            
+            <p class="bio-text">
+                I build AI-powered systems that solve critical environmental challenges. My work bridges cutting-edge machine learning with earth system science, creating tools that matter for our planet's future.
+            </p>
+            
+            <p class="bio-text">
+                From developing global-scale forest dynamics models to pioneering deep learning applications for ecosystem prediction, my research influences policy at NASA, USFS, and beyond.
+            </p>
+            
+            <div class="bio-stats">
+                <div class="stat">
+                    <span class="stat-number">17</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Impact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Let's Connect</h2>
+            <div class="contact-links">
+                <a href="mailto:leo@leonardo-call.com" class="contact-link">Email</a>
+                <a href="https://github.com/lcalle" class="contact-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/leonardo-calle-5865b3234/" class="contact-link" target="_blank">LinkedIn</a>
+                <a href="https://instagram.com/calle_meiji" class="contact-link" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
