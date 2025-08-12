@@ -143,6 +143,54 @@
             color: #999;
             background: #f8f8f8;
         }
+
+       /*   -- bio dropdown -- */
+        .bio-dropdown {
+            margin-top: 1rem;
+            position: relative;
+        }
+        
+        .bio-toggle {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background: #f8f8f8;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .bio-toggle:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+        
+        .bio-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            margin-top: 1rem;
+        }
+        
+        .bio-content.open {
+            max-height: 500px;
+        }
+        
+        .bio-text-expanded {
+            color: #333;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .bio-text-expanded p {
+            margin-bottom: 1rem;
+        }
+
+
         
         /* Second Hero (Coder Section) */
         .hero-alt {
@@ -446,6 +494,19 @@
             <div class="hero-label">scientist</div>
             <h1 class="hero-title">Leonardo Calle, Ph.D.</h1>
             <p class="hero-subtitle">Ph.D. scientist-entrepreneur developing technology solutions for ecological decision-making, scientific workforce analytics, and artistic expression.</p>
+        <div>
+
+        <div class="bio-dropdown">
+            <a href="#" class="bio-toggle" onclick="toggleBio(event)">Read Full Bio ↓</a>
+            <div class="bio-content" id="bioContent">
+                <div class="bio-text-expanded">
+                    <p>I develop intelligent systems at the intersection of artificial intelligence, earth science, and environmental consulting. As Founder and CEO of CalleEcology Inc. and Founder/CTO of mewmewmew Inc., I build AI-powered platforms that solve critical environmental challenges while making sophisticated science tools accessible and scalable.</p>
+                    
+                    <p>My technical foundation spans deep learning, ecosystem modeling, and high-performance computing, developed through roles at NASA-GSFC, UMD-ESSIC, and Montana State University. I've published 17 papers in top-tier journals and pioneered applications from global forest dynamics models to continental-scale ecosystem analysis using space LiDAR data. I also explore creative systems thinking through digital art and visual storytelling, applying the same innovative problem-solving approaches that drive my scientific work.</p>
+                    
+                    <p>I specialize in translating cutting-edge research into practical business solutions. My companies serve major scientific societies and consulting organizations, focusing on AI integration, atomic task decomposition, and intelligent workflow orchestration that bridges advanced research with real-world environmental impact.</p>
+                </div>
+            </div>
         </div>
         
         <div class="hero-image">
@@ -570,5 +631,22 @@ const impact = {<br>
             </div>
         </div>
     </section>
+
+<script>
+function toggleBio(event) {
+    event.preventDefault();
+    const content = document.getElementById('bioContent');
+    const toggle = event.target;
+    
+    if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        toggle.textContent = 'Read Full Bio ↓';
+    } else {
+        content.classList.add('open');
+        toggle.textContent = 'Hide Bio ↑';
+    }
+}
+</script>
+
 </body>
 </html>
