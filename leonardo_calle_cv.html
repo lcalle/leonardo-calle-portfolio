@@ -26,16 +26,16 @@
       letter-spacing:.02em;
     }
     .content { font-size:14px; margin:0; }
-    .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .split { display:grid; grid-template-columns:1fr; gap:14px; }
+    @media (min-width:760px){ .split { grid-template-columns:1fr 1fr; } }
     .job { margin:16px 0; }
     .job-title { font-weight:700; color:#000; }
     .job-dates { color:var(--muted); font-size:13px; margin-top:2px; }
+    .job-org { font-size:13px; color:var(--muted); margin-top:2px; }
     ul { margin:8px 0 0 18px; }
     li { margin:6px 0; }
-    .split { display:grid; grid-template-columns:1fr; gap:14px; }
-    @media (min-width:760px){ .split { grid-template-columns:1fr 1fr; } }
-    .taglist { columns:2; column-gap:28px; }
     .small { font-size:13px; color:var(--muted); }
+    .taglist { columns:2; column-gap:28px; font-size:14px; }
     @media print {
       body { padding:16px; }
       a { text-decoration:none; border:0; color:#000; }
@@ -46,8 +46,7 @@
 <body>
   <header class="header">
     <h1 class="name">Leonardo Calle, Ph.D.</h1>
-    <p class="title">Technical Leader | ML Systems &amp; Risk Modeling | Production AI Development</p>
-    <!-- If your canonical site differs, edit the link below -->
+    <p class="title">Ecology · Numerical &amp; Mathematical Modeling · Dynamical Systems</p>
     <p class="contact">
       <a href="mailto:leo@leonardo-calle.com">leo@leonardo-calle.com</a> |
       <a href="https://leonardo-calle.com" rel="noopener">leonardo-calle.com</a> |
@@ -55,212 +54,413 @@
     </p>
   </header>
 
+  <!-- EDUCATION -->
   <section class="section">
-    <h2 class="section-header">PROFESSIONAL SUMMARY</h2>
+    <h2 class="section-header">EDUCATION</h2>
     <p class="content">
-      Technical leader with 15+ years building production ML systems for complex temporal and spatial data analysis. Proven track record scaling algorithms from research through deployment, with expertise in risk modeling, signal processing, and leading cross-functional teams. Recently founded two AI companies while maintaining deep technical expertise in physics-informed machine learning and earth system modeling.
+      <strong>Ph.D. Ecology &amp; Environmental Sciences</strong> — Montana State University, Bozeman, MT (2014–2019)<br/>
+      <strong>M.S. Environmental Sciences &amp; GIS Certificate</strong> — Florida Atlantic University, Boca Raton, FL (2012–2014)<br/>
+      <strong>B.S. Biological Sciences</strong> — Florida Atlantic University, Boca Raton, FL (2006–2010)
     </p>
   </section>
 
+  <!-- COMPUTER PROFICIENCIES -->
   <section class="section">
-    <h2 class="section-header">BUSINESS IMPACT</h2>
+    <h2 class="section-header">COMPUTER PROFICIENCIES</h2>
+    <div class="split">
+      <div>
+        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">AI Modeling</h3>
+        <ul>
+          <li>Python / PyTorch, TensorFlow, Keras</li>
+          <li>LSTM, deep neural networks, transformers</li>
+          <li>Model development, training, and fine-tuning</li>
+          <li>Physics-informed neural networks, process-model emulation</li>
+        </ul>
+
+        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">Computer Programming</h3>
+        <ul>
+          <li>C, C++, Fortran, Python, R, Bash, VBA, C# (.NET)</li>
+        </ul>
+
+        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">Code Management, DevOps &amp; CI/CD</h3>
+        <ul>
+          <li>GitHub, GitLab, Docker</li>
+          <li>Buddy CI/CD, JIRA / Confluence</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Earth System Modeling</h3>
+        <ul>
+          <li>Mathematical modeling of global biogeochemical cycles</li>
+          <li>Forest dynamics and demography</li>
+          <li>Landscape hydrology, fluid dynamics, atmospheric transport</li>
+          <li>Global greenhouse gas simulations</li>
+        </ul>
+
+        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">High-Performance Computing</h3>
+        <ul>
+          <li>AWS, NASA Discover, NSF Frontera / Stampede clusters</li>
+          <li>Slurm (Linux / Unix) environments</li>
+          <li>Python: NumPy, SciPy, pandas, Dask</li>
+          <li>R: foreach, parallel, openmpi, fst</li>
+        </ul>
+
+        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">Data Types &amp; Volumes</h3>
+        <ul>
+          <li>Terabyte-scale data processing and model integration</li>
+          <li>Satellite data and imaging spectroscopy (hyperspectral)</li>
+          <li>LiDAR and other remote sensing datasets</li>
+        </ul>
+
+        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">Statistical Software &amp; GIS</h3>
+        <ul>
+          <li>R, Python</li>
+          <li>QGIS / GDAL, Google Earth Engine</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS & SOFT SKILLS -->
+  <section class="section">
+    <h2 class="section-header">BUSINESS &amp; SOFT SKILLS</h2>
+    <div class="taglist">
+      <li>Proposal Writing</li>
+      <li>Strategy &amp; Planning</li>
+      <li>Technical &amp; Scientific Writing</li>
+      <li>Human Analysis</li>
+      <li>Government Liaison (NASA / USFS / UMD)</li>
+      <li>Public Speaking</li>
+      <li>Team-Oriented Management &amp; Mentoring</li>
+      <li>Decision-Making</li>
+    </div>
+  </section>
+
+  <!-- AWARDS & GRANTS -->
+  <section class="section">
+    <h2 class="section-header">AWARDS &amp; GRANTS</h2>
     <ul>
-      <li><strong>Production Systems:</strong> Deployed ML algorithms processing continental-scale datasets in high-performance computing environments with rigorous validation protocols.</li>
-      <li><strong>Cross-Functional Leadership:</strong> Led interdisciplinary teams across NASA, USFS, and private sector partnerships, managing complex stakeholder relationships spanning government, academic, and industry partners.</li>
-      <li><strong>Algorithm Development:</strong> Built end-to-end ML pipelines from requirements specification through production deployment, specializing in risk prediction and temporal pattern analysis.</li>
-      <li><strong>Regulatory Experience:</strong> Delivered systems meeting NASA validation standards and federal agency compliance requirements.</li>
+      <li>NASA Earth and Space Science Fellowship (NESSF, 2016–2019)</li>
+      <li>NSF East Asia Pacific Summer Institute Graduate Fellowship (NSF-EAPSI, Jun–Aug 2015)</li>
+      <li>Japan Society for the Promotion of Science Fellowship (JSPS-EAPSI, Jun–Aug 2015)</li>
+      <li>NSF Undergraduate Research &amp; Mentoring Fellowship (2 years; 2009–2010)</li>
+      <li>FAU Start-Up Research Grant, Florida Atlantic University (2012)</li>
+      <li>Research Grant, PADI Foundation (2012)</li>
     </ul>
   </section>
 
-  <section class="section">
-    <h2 class="section-header">TECHNICAL EXPERTISE</h2>
-
-    <div class="split">
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Machine Learning &amp; Production Systems</h3>
-        <ul>
-          <li>Production ML frameworks: PyTorch, TensorFlow, FastAPI, PostgreSQL</li>
-          <li>Advanced architectures: Transformers, ViTs, LSTMs, CNNs</li>
-          <li>MLOps: Docker, CI/CD, automated testing, monitoring</li>
-          <li>Cloud &amp; HPC: AWS, distributed computing, high-performance computing</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Risk Modeling &amp; Analytics</h3>
-        <ul>
-          <li>Predictive modeling for wildfire simulation and real-time risk assessment</li>
-          <li>Continental-scale classification &amp; forecasting systems</li>
-          <li>Time-series analysis, statistical pattern recognition, multi-modal sensor integration</li>
-          <li>Physics-informed neural networks integrated with traditional simulation approaches</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="split" style="margin-top:6px;">
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Software Engineering</h3>
-        <ul>
-          <li>Production systems in Python; Git workflows; testing &amp; documentation standards</li>
-          <li>Database management (PostgreSQL), large-scale data pipelines</li>
-          <li>System reliability: performance monitoring, failure analysis, validation</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
+  <!-- PROFESSIONAL EXPERIENCE -->
   <section class="section">
     <h2 class="section-header">PROFESSIONAL EXPERIENCE</h2>
 
     <article class="job">
-      <div class="job-title">Founder &amp; CTO, mewmewmew Inc.</div>
-      <div class="job-dates">January 2025 – Present</div>
+      <div class="job-title">Research Scientist (part-time)</div>
+      <div class="job-org">Harte Research Institute, Texas A&amp;M Corpus Christi</div>
+      <div class="job-dates">Oct 2025 – Present</div>
       <ul>
-        <li><strong>Production AI Platform:</strong> Architected and deployed FastAPI-based ML system with transformer models serving an active client base.</li>
-        <li><strong>Algorithm Engineering:</strong> Built complete ML pipeline from data preprocessing to deployment, specializing in document analysis &amp; NLP.</li>
-        <li><strong>System Reliability:</strong> Implemented automated testing, monitoring, and deployment workflows ensuring consistent performance.</li>
-        <li><strong>Technical Leadership:</strong> Led interdisciplinary team through full product lifecycle from research to production.</li>
+        <li>Coastal-hydrological modeling on the Texas Gulf Coast.</li>
+        <li>Integrated modeling using sub-centimeter drone imagery time series and HOBO water logger deployments.</li>
       </ul>
     </article>
 
     <article class="job">
-      <div class="job-title">Founder &amp; CEO, CalleEcology Inc.</div>
-      <div class="job-dates">January 2025 – Present</div>
+      <div class="job-title">Personal Sabbatical – Life, Art, and AI</div>
+      <div class="job-dates">Mar 2024 – Oct 2025</div>
       <ul>
-        <li><strong>Product Development:</strong> Created AI-integrated curriculum teaching modern deep learning techniques to the scientific community.</li>
-        <li><strong>Technical Communication:</strong> Delivered algorithm training to diverse technical and non-technical audiences.</li>
-        <li><strong>Framework Development:</strong> Built structured approaches for AI problem-solving using state-of-the-art transformer architectures.</li>
+        <li>Focused on reading theory, making art, and conceptual work (calle-arte.com).</li>
+        <li>Developed and delivered a 4-week course to Ecological Society of America professional members (Spring 2025): “How to Think Like a Programmer: AI &amp; Code Generation for Data Science”.</li>
+        <li>Established two businesses, CalleEcology Inc. and mewmewmew, Inc., including full-stack development (DigitalOcean droplets, Cloudflare; React / npm / APIs; Python-dominant; SQL databases).</li>
+        <li>Integrated AI tools via API calls into secure technology stacks.</li>
+        <li>Conducted UI/UX research and development.</li>
       </ul>
     </article>
 
     <article class="job">
-      <div class="job-title">Assistant Research Scientist, UMD-ESSIC / NASA-GSFC</div>
-      <div class="job-dates">January 2023 – March 2024</div>
+      <div class="job-title">Assistant Research Scientist</div>
+      <div class="job-org">UMD-ESSIC / NASA-GSFC</div>
+      <div class="job-dates">Jan 2023 – Mar 2024</div>
       <ul>
-        <li>Led continental-scale forest classification using LiDAR time-series and deep learning.</li>
-        <li>Developed wildfire simulation algorithms for real-time prediction with federal partners.</li>
-        <li>Implemented hyperspectral analytics with cutting-edge neural architectures.</li>
-        <li>Maintained deployed algorithms in HPC with rigorous validation protocols.</li>
-        <li>Coordinated projects across NASA, USFS, engineers, and domain experts.</li>
+        <li>Performed unsupervised classification of forest canopy structure at continental scales using spaceborne LiDAR (UMD / GSFC / USFS / Harvard).</li>
+        <li>Simulated wildfires to identify scaling solutions for predictive models (USFS / NASA / UMD).</li>
+        <li>Added biodiversity (plant trait variance) and coupled carbon–nitrogen cycling to a global ecosystem model.</li>
+        <li>Investigated ecosystem spectral diversity and assimilated hyperspectral data (NASA / GSFC).</li>
+        <li>Programmed in C / R / Python / Bash on NASA Discover supercomputer.</li>
+        <li>Served on NASA FireSense Implementation Team.</li>
+        <li>USFS Fire and Smoke Model Evaluation Experiment data management lead and strategic team member.</li>
+        <li>Co-authored ROSES 2023 proposals on ecosystem demography and EMIT hyperspectral data integration.</li>
+        <li>NASA Science Mentor for supervised/unsupervised classification of EMIT hyperspectral data.</li>
       </ul>
     </article>
 
     <article class="job">
-      <div class="job-title">Senior Scientist &amp; Lead Model Developer, Regrow Ag, Inc.</div>
-      <div class="job-dates">July 2021 – December 2022</div>
+      <div class="job-title">Senior Scientist &amp; Lead Model Developer</div>
+      <div class="job-org">Regrow Ag, Inc.</div>
+      <div class="job-dates">Jul 2021 – Dec 2022</div>
       <ul>
-        <li>Enhanced DNDC biogeochemical simulation model for risk and carbon cycle analysis.</li>
-        <li>Developed coupled C–N cycle models with water management &amp; soil dynamics.</li>
-        <li>Built automation for calibration, sensitivity analysis, and validation.</li>
-        <li>Integrated satellite data via real-time assimilation pipelines.</li>
-        <li>Deployed scalable systems on AWS with Dockerized workflows.</li>
+        <li>Maintained and developed modules for the DNDC process-based biogeochemistry model.</li>
+        <li>Engineered workflows for calibration, sensitivity analyses, model evaluation, and data visualization.</li>
+        <li>Developed modules for crop growth dynamics (C–N allocation, functional stress response), water management and hydrology for rice crops, grazing, fertilizers, and soil C–N dynamics.</li>
+        <li>Integrated satellite data via assimilation workflows.</li>
+        <li>Programmed in C++, Python, R, Docker, and Bash with AWS / cloud-based infrastructure.</li>
       </ul>
     </article>
 
     <article class="job">
-      <div class="job-title">Post-doctoral Researcher, University of Montana</div>
-      <div class="job-dates">April 2019 – February 2021</div>
+      <div class="job-title">Assistant Research Scientist</div>
+      <div class="job-org">University of Maryland ESSIC</div>
+      <div class="job-dates">Apr 2021 – Jul 2021</div>
       <ul>
-        <li>Developed LSTM/CNN architectures for large-area spatio-temporal prediction.</li>
-        <li>Built computer-vision models using multi-temporal satellite imagery.</li>
-        <li>Applied advanced statistics to complex environmental time-series.</li>
-        <li>Implemented distributed training &amp; inference on HPC systems.</li>
+        <li>Implemented a dynamic radiative transfer model (PROSAIL, PROSPECT) into a process-based global ecosystem model to simulate dynamic spectral reflectances.</li>
+        <li>Programmed in C / Fortran using high-performance computing environments.</li>
       </ul>
     </article>
 
     <article class="job">
-      <div class="job-title">Graduate Research Scientist (Ph.D.), Montana State University</div>
-      <div class="job-dates">August 2014 – May 2019</div>
+      <div class="job-title">Post-doctoral Researcher</div>
+      <div class="job-org">University of Montana</div>
+      <div class="job-dates">Apr 2019 – Feb 2021</div>
       <ul>
-        <li>Developed global forest dynamics in the LPJ Dynamic Global Vegetation Model.</li>
-        <li>Integrated land use, forest management, and fire dynamics into ESMs.</li>
-        <li>Created statistical methods for atmospheric CO<sub>2</sub> signal decomposition.</li>
-        <li>Processed terabyte-scale satellite, eddy-covariance, and atmospheric datasets.</li>
+        <li>Developed a deep learning emulator of space–time soil moisture dynamics across the Western USA based on a high-resolution process-based simulation model.</li>
+        <li>Built a deep learning model to predict forest regrowth probability at high spatial resolution (30 m) across the Western USA using satellite time series and spatially explicit remote sensing data (Google Earth Engine).</li>
+        <li>Developed workflow pipelines for multi-criteria parameter optimization across 100 watersheds.</li>
+        <li>Programmed with Google Earth Engine API, R, Keras / TensorFlow, C, and Bash.</li>
+        <li>Ran large-scale models on multiple Slurm-based computing clusters.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Graduate Research (Ph.D.)</div>
+      <div class="job-org">Montana State University</div>
+      <div class="job-dates">Aug 2014 – May 2019</div>
+      <ul>
+        <li>Developed a representation of forest age-class stand dynamics at global scales, fully coupled with land use change, land management (wood harvest), and fire dynamics in the LPJ Dynamic Global Vegetation Model.</li>
+        <li>Developed and incorporated alternative mathematical models of plant phenology and autotrophic respiration to evaluate model structural uncertainty.</li>
+        <li>Processed U.S. Forest Inventory data, eddy-covariance flux tower data, and satellite data to evaluate forest age-class simulations.</li>
+        <li>Analyzed satellite retrievals of atmospheric CO<sub>2</sub> from multiple satellites.</li>
+        <li>Developed a statistical algorithm for signal decomposition of CO<sub>2</sub> seasonal cycles and released as an R package.</li>
+        <li>Used high-performance computing clusters to analyze ~0.5 TB of global terrestrial ecosystem simulation outputs.</li>
+        <li>Programmed in C, Fortran, and R.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Primary Research Investigator</div>
+      <div class="job-org">Florida Atlantic University (FAU)</div>
+      <div class="job-dates">Jan 2014 – May 2014</div>
+      <ul>
+        <li>Developed a resource prioritization tool for conservation organizations using Multi-Criteria Decision Analysis (MCDA) with hierarchical weighting of qualitative/quantitative data.</li>
+        <li>Coded a flexible-input C# software tool with graphical front-end.</li>
+        <li>Organized a breakout session at The Wildlife Society of Florida annual conference to refine criteria, model weights, and integration into decision-making.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Graduate Research Assistant (M.Sc.)</div>
+      <div class="job-org">Florida Atlantic University</div>
+      <div class="job-dates">Jan 2012 – May 2014</div>
+      <ul>
+        <li>Developed a spatially explicit predictive model of habitat availability.</li>
+        <li>Coded the model in C# (.NET) with a graphical front-end.</li>
+        <li>Modeled habitat selection using a conditional logistic regression model (resource selection function) with R (package: survival).</li>
+        <li>Used Python, R, and VBA to manipulate and manage large datasets.</li>
+        <li>Conducted bird surveys (spot-mapping, river transects by boat).</li>
+        <li>Performed aquatic prey sampling, nestling wading bird bolus sampling, snorkeling transects, and quadrat-based estimates of seagrass density and species composition.</li>
+        <li>Collected sediment cores and analyzed benthic substrate.</li>
+        <li>Produced figures with R (ggplot2), SigmaPlot v10, and ArcGIS.</li>
+        <li>Supervised technicians and volunteers; captained a small boat in remote backcountry (100+ hrs boating).</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Research Assistant</div>
+      <div class="job-org">Florida Atlantic University</div>
+      <div class="job-dates">Dec 2010 – Dec 2011</div>
+      <ul>
+        <li>Developed a spatio-temporal hydrologic model of tides to evaluate short- and long-term effects of tidal dynamics and sea level rise on wading bird foraging habitat.</li>
+        <li>Coupled the tidal model to the SLAMM (Sea Level Affecting Marshes Model) to evaluate long-term accretion, sedimentation, and wetland conversion.</li>
+        <li>Coded models in C# (.NET) with graphical front-end.</li>
+        <li>Used Python, R, and VBA for data manipulation and management.</li>
+        <li>Conducted Bayesian hierarchical population analyses in WinBUGS.</li>
+        <li>Undertook extensive fieldwork and boat-based bird surveys in remote backcountry.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Field Technician, Avian Ecology Laboratory</div>
+      <div class="job-org">Florida Atlantic University</div>
+      <div class="job-dates">Dec 2010 – Jun 2011</div>
+      <ul>
+        <li>Throw-trap sampling of aquatic fauna in the Greater Florida Everglades.</li>
+        <li>Data logging using mobile mapping software; vegetation transects and species identification; field hydrology measurements.</li>
+        <li>Aquatic fauna identification, measurement, and QA/QC.</li>
+        <li>Field sites accessed by helicopter or airboat in extreme conditions.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Research Assistant</div>
+      <div class="job-org">Florida Atlantic University</div>
+      <div class="job-dates">Jun 2010 – Dec 2010</div>
+      <ul>
+        <li>Coded a spatio-temporal Landscape Quality Index model for endangered Wood Storks in C# and Python.</li>
+        <li>Performed statistical analyses using GIS, Python, and R.</li>
+        <li>Developed a stochastic model for explicit inclusion of model uncertainty.</li>
+        <li>Conducted model validation and sensitivity analyses.</li>
+        <li>Managed data using SAS and Excel VBA; produced figures in SigmaPlot.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Founder</div>
+      <div class="job-org">Citizen Science &amp; Undergraduate Research Conservation Program, FAU</div>
+      <div class="job-dates">Aug 2009 – Jun 2011</div>
+      <ul>
+        <li>Developed a conservation initiative using citizen science and research to protect a threatened Gopher Tortoise population and pine–oak scrub habitat.</li>
+        <li>Developed research methods and mentored undergraduates in field-based ecology research.</li>
+        <li>Organized annual Bioblitz outreach events and secured ~$3,000 in grants.</li>
+        <li>Helped expand program budget from $800 in the inaugural year to over $18,000 in the second year.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Undergraduate Researcher, NSF</div>
+      <div class="job-org">Florida Atlantic University</div>
+      <div class="job-dates">Aug 2009 – Dec 2009</div>
+      <ul>
+        <li>Conducted dissections, diet analyses, and morphometrics on 22 Sacred Ibis carcasses.</li>
+        <li>Quantified effects of anthropogenic food sources on species ecology.</li>
+        <li>Performed cluster and discriminant analyses (Primer v6); used SAS for statistical tests and SigmaPlot for figure production.</li>
+        <li>Research published in Florida Field Naturalist (2011).</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Paleoecology Intern</div>
+      <div class="job-org">South Florida Water Management District</div>
+      <div class="job-dates">May 2009 – Aug 2009</div>
+      <ul>
+        <li>Identified macrofossils (seeds) in soil cores under microscope.</li>
+        <li>Constructed field sampling stations for leaf litter deposition in remote wetlands.</li>
+        <li>Conducted literature reviews on hydrology, primary productivity, and accretion; assessed sea-level rise impacts using macrofossil records.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Data Analyst</div>
+      <div class="job-org">Avian Ecology Laboratory, FAU</div>
+      <div class="job-dates">Sept 2008</div>
+      <ul>
+        <li>Used Microsoft Excel for data analysis and table production.</li>
+        <li>Produced figures in SigmaPlot.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Field Technician, Avian Ecology Laboratory</div>
+      <div class="job-org">Florida Atlantic University</div>
+      <div class="job-dates">Feb 2008 – Jun 2008</div>
+      <ul>
+        <li>Throw-trap (1m × 1m) sampling of aquatic fauna; vegetation transects; species identification; field hydrology measurements.</li>
+        <li>QA/QC and management of large datasets.</li>
+        <li>Statistical analyses in SAS.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-title">Manager, Receiving Department; Lead Bookseller; Cashier</div>
+      <div class="job-org">Barnes &amp; Noble Bookstores (Avon, CT; Albuquerque, NM; Denver, CO; Boca Raton, FL)</div>
+      <div class="job-dates">Aug 2004 – Feb 2008</div>
+      <ul>
+        <li>Customer service, shipping and receiving.</li>
+        <li>Supervised receiving department and served as lead bookseller (displays, placement, customer service).</li>
       </ul>
     </article>
   </section>
 
+  <!-- PUBLICATIONS -->
   <section class="section">
-    <h2 class="section-header">DOMAIN EXPERTISE</h2>
-    <div class="split">
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Risk &amp; Predictive Modeling</h3>
-        <ul>
-          <li>15+ years developing models for environmental risk, wildfire simulation, and agricultural systems.</li>
-          <li>Experience with real-time risk prediction and continental-scale classification.</li>
-          <li>Uncertainty quantification and temporal pattern recognition.</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Regulated Environment Experience</h3>
-        <ul>
-          <li>NASA collaborations with comprehensive validation &amp; documentation standards.</li>
-          <li>Federal partnerships requiring strict algorithm verification &amp; testing.</li>
-          <li>Compliance-ready, reproducible systems and documentation.</li>
-        </ul>
-      </div>
-    </div>
-    <div style="margin-top:8px;">
-      <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Production Algorithm Development</h3>
-      <ul>
-        <li>Full lifecycle: requirements → validation → deployment → monitoring.</li>
-        <li>Failure analysis, performance optimization, and stakeholder alignment.</li>
-      </ul>
-    </div>
+    <h2 class="section-header">PUBLICATIONS</h2>
+    <ul>
+      <li>M. Feng, J. O. Sexton, P. Wang, P. M. Montesano, <strong>L. Calle</strong>, N. Carvalhais, B. Poulter, M. J. Macander, M. A. Wulder, M. Wooten, W. Wagner, A. Elders, S. Channan, and C. S. R. Neigh. (2025). Northward shift of boreal tree cover confirmed by satellite record. <em>EGUsphere</em>. doi:10.5194/egusphere-2025-2268.</li>
+      <li>C. S. R. Neigh, P. M. Montesano, J. O. Sexton, M. Wooten, W. Wagner, M. Feng, <strong>L. Calle</strong> and M. L. Carroll. (2025). Russian forests show strong potential for young forest growth. <em>Nature Communications Earth &amp; Environment</em>. doi:10.1038/s43247-025-02006-9.</li>
+      <li>J. M. Bruening, R. O. Dubayah, N. Pederson, B. Poulter and <strong>L. Calle</strong>. (2024). Definition criteria determine the success of old-growth mapping. <em>Ecological Indicators</em>. doi:10.1016/j.ecolind.2024.111709.</li>
+      <li>B. Poulter, B. Currey, <strong>L. Calle</strong>, A. N. Shiklomanov, C. H. Amaral, E. N. J. Brookshire, P. Campbell, K. Cawse-Nicholson, F. Huemmrich, C. E. Miller, K. Miner, Z. Pierrat, A. M. Raiho, D. Schimel, S. Serbin, W. K. Smith, N. Stavros, J. Stutz, P. Townsend, D. R. Thompson, Z. Zhang, and B. (2023). Simulating global dynamic surface reflectances for imaging spectroscopy spaceborne missions: LPJ-PROSAIL. <em>JGR-Biogeosciences</em>. doi:10.1029/2022JG006935.</li>
+      <li>M. T. Martinez, <strong>L. Calle</strong>, D. E. Gawlik, and S. Romañach. (2022). Evaluating temporal and spatial transferability of a tidal inundation model for foraging waterbirds. <em>Ecosphere</em>. doi:10.1002/ecs2.4030.</li>
+      <li><strong>L. Calle</strong>, and B. Poulter. (2021). Ecosystem age-class dynamics and distribution in the LPJ-wsl v2.0 global ecosystem model. <em>Geoscientific Model Development</em>. doi:10.5194/gmd-14-2575-2021.</li>
+      <li>J. P. Scholl, <strong>L. Calle</strong>, N. Miller, and D. L. Venable. (2020). Offspring polymorphism and bet hedging: a large-scale phylogenetic analysis. <em>Ecology Letters</em>. doi:10.1111/ele.13522.</li>
+      <li>B. B. Tumolo, <strong>L. Calle</strong>, H. Anderson, M. Briggs, S. Carlson, M. MacDonald, H. Reinert and L. K. Albertson. (2018). Toward spatio-temporal delineation of positive interactions in ecology. <em>Ecology and Evolution</em>. doi:10.1002/ece3.6616.</li>
+      <li>T. A. M. Pugh, M. Lindeskog, B. Smith, B. Poulter, A. Arneth, V. Haverd, and <strong>L. Calle</strong>. (2019). Role of forest regrowth in global carbon sink dynamics. <em>Proceedings of the National Academy of Sciences</em>. doi:10.1073/pnas.1810512116.</li>
+      <li>K. C. Heim, T. E. McMahon, <strong>L. Calle</strong>, M. S. Wipfli, and J. A. Falke. (2019). A general model of temporary aquatic habitat use: Water phenology as a life history filter. <em>Fish and Fisheries</em>. doi:10.1111/faf.12386.</li>
+      <li><strong>L. Calle</strong>, B. Poulter, and P. K. Patra. (2019). A segmentation algorithm for characterizing rise and fall segments in seasonal cycles: an application to XCO<sub>2</sub> to estimate benchmarks and assess model bias. <em>Atmospheric Measurement Techniques</em>. doi:10.5194/amt-12-2611-2019.</li>
+      <li>M. Kondo, P. K. Patra, S. Sitch, P. Friedlingstein, B. Poulter, F. Chevallier, P. Ciais, J. G. Canadell, A. Bastos, R. Lauerwald, <strong>L. Calle</strong>, K. Ichii, P. Anthoni, A. Arneth, V. Haverd, A. K. Jain, E. Kato, M. Kautz, R. M. Law, S. Lienert, D. Lombardozzi, T. Maki, T. Nakamura, P. Peylin, C. Rodenbeck, R. Zhuravlev, T. Saeki, H. Tian, D. Zhu, T. Ziehn. (2019). State of the science in reconciling top-down and bottom-up approaches for terrestrial CO<sub>2</sub> budget. <em>Global Change Biology</em>. doi:10.1111/gcb.14917.</li>
+      <li><strong>L. Calle</strong>, L. Green, A. Strong, and D. E. Gawlik. (2018). Time-integrated habitat availability is a resource attribute that informs patterns of use in intertidal areas. <em>Ecological Monographs</em>. doi:10.1002/ecm.1305.</li>
+      <li>Z. Zhang, N. E. Zimmermann, <strong>L. Calle</strong>, G. Hurtt, A. Chatterjee, and B. Poulter. (2018). Enhanced response of global wetland methane emissions to recent El Niño–Southern Oscillation events. <em>Environmental Research Letters</em>. doi:10.1088/1748-9326/aac939.</li>
+      <li>M. Kondo, K. Ichii, P. K. Patra, B. Poulter, <strong>L. Calle</strong>, C. Koven, T. A. M. Pugh, E. Kato, A. Harper, S. Zaehle, and A. Wiltshire. (2018). Plant regrowth as a driver of recent enhancement of terrestrial CO<sub>2</sub> uptake. <em>Geophysical Research Letters</em>. doi:10.1029/2018GL077633.</li>
+      <li>M. Kondo, K. Ichii, P. Patra, J. G. Canadell, B. Poulter, T. Saeki, <strong>L. Calle</strong>, N. Saigusa, S. Sitch, P. Friedlingstein, A. Arneth, A. Harper, A. K. Jain, E. Kato, C. Koven, F. Li, T. A. M. Pugh, S. Zaehle, A. Wiltshire, F. Chevallier, T. Maki, T. Nakamura, Y. Niwa, C. Rödenbeck. (2018). Land use change and El Niño–Southern Oscillation drive decadal carbon balance shifts in Southeast Asia. <em>Nature Communications</em>.</li>
+      <li>J. Zscheischler, M. D. Mahecha, V. Avitabile, <strong>L. Calle</strong>, N. Carvalhais, P. Ciais, F. Gans, N. Gruber, J. Hartmann, M. Herold, K. Ichii, M. Jung, P. Landschützer, G. G. Laruelle, R. Lauerwald, D. Papale, P. Peylin, B. Poulter, D. Ray, P. Regnier, C. Rödenbeck, R. M. (2017). Reviews and Syntheses: An empirical spatiotemporal description of the global surface-atmosphere carbon fluxes: opportunities and data limitations. <em>Biogeosciences</em> 15:3685.</li>
+      <li><strong>L. Calle</strong>, J. G. Canadell, P. Patra, P. Ciais, K. Ichii, H. Tian, M. Kondo, S. Piao, A. Arneth, A. B. Harper, A. Ito, E. Kato, C. Koven, S. Sitch, B. D. Stocker, N. Viovy, A. Wiltshire, S. Zaehle, and B. Poulter. (2016). Regional carbon fluxes from land use and land cover change in Asia, 1980–2009. <em>Environmental Research Letters</em> 11:074011.</li>
+      <li><strong>L. Calle</strong>, D. E. Gawlik, Z. Xie, L. Green, B. Lapointe, and A. Strong. (2016). Effects of tidal periodicities and diurnal foraging constraints on the density of foraging wading birds. <em>The Auk: Ornithological Advances</em> 133:378–396.</li>
+      <li>L. Green, D. E. Gawlik, <strong>L. Calle</strong>, and B. Lapointe. (2014). Relative effects of physical and small-scale factors on the distribution of tropical seagrasses in the Great White Heron National Wildlife Refuge, Lower Florida Keys. <em>Aquatic Botany</em> 124:45–53.</li>
+      <li><strong>L. Calle</strong>, L. Green, D. E. Gawlik, and B. E. Lapointe. (2014). Feasibility of evaluating the impacts of sea level rise on foraging habitat of the Little Blue Heron in the Great White Heron National Wildlife Refuge: Phase II, factors affecting habitat. Final report to the USFS, Big Pine Key, Florida.</li>
+      <li><strong>L. Calle</strong>, D. E. Gawlik, Z. Xie, and B. Johnson. (2012). Feasibility of evaluating the impacts of sea level rise on foraging habitat of the Little Blue Heron in the Great White Heron National Wildlife Refuge. Final report to the U.S. Fish and Wildlife Service, Big Pine Key, Florida.</li>
+      <li><strong>L. Calle</strong> and D. E. Gawlik. (2011). Anthropogenic food in the diet of the Sacred Ibis, <em>Threskiornis aethiopicus</em>, a non-native wading bird in southeastern Florida, USA. <em>Florida Field Naturalist</em> 39:1–15.</li>
+    </ul>
   </section>
 
+  <!-- INVITED TALKS -->
   <section class="section">
-    <h2 class="section-header">EDUCATION</h2>
-    <p class="content">
-      <strong>Ph.D. Ecology &amp; Environmental Sciences</strong> — Montana State University (2014–2019)<br/>
-      <strong>M.S. Environmental Sciences &amp; GIS Certificate</strong> — Florida Atlantic University (2012–2014)<br/>
-      <strong>B.S. Biological Sciences</strong> — Florida Atlantic University (2006–2010)
-    </p>
+    <h2 class="section-header">INVITED TALKS</h2>
+    <ul>
+      <li>“Climate Projections, Global Ecology &amp; Career Trajectories.” Brown bag talk to Magic Leap, Inc. (Jan 2025).</li>
+      <li>“Ecosystem Modeling in Spacetime: From Physics to Deep Learning.” Department of Biological and Allied Health Sciences, Bloomsburg University (2020).</li>
+      <li>“The Global Carbon Cycle – impact on plants, animals, and ecosystems.” Guest lecture, undergraduate ecology course, Montana State University (2018).</li>
+      <li>“History of the land – challenges of modeling the effects of land use change and land management on the global carbon cycle.” Ignite Session, Ecological Society of America Annual Conference (2017).</li>
+      <li>“Modeling the Global Carbon Cycle with Dynamic Global Vegetation Models.” Hokkaido University, Japan (2015).</li>
+    </ul>
   </section>
 
+  <!-- CONFERENCE ACTIVITY -->
   <section class="section">
-    <h2 class="section-header">LEADERSHIP &amp; IMPACT</h2>
-    <div class="split">
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Technical Leadership</h3>
-        <ul>
-          <li>Led teams across data science, software engineering, and domain science.</li>
-          <li>Managed stakeholders across government, academia, and industry.</li>
-          <li>Established best practices for development, testing, and documentation.</li>
-        </ul>
-        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">Professional Activities</h3>
-        <ul>
-          <li>NASA FireSense Implementation Team (2023–2024).</li>
-          <li>USFS FASMEE Data Management Lead (2023–2024).</li>
-          <li>Talks at AGU, ESA, International Carbon Dioxide Conference.</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Scientific Impact</h3>
-        <ul>
-          <li>30+ peer-reviewed publications (e.g., <em>Nature Geoscience</em>, <em>PNAS</em>, <em>Global Change Biology</em>).</li>
-          <li>Lead author on carbon-cycle and climate–ecosystem studies.</li>
-          <li>Open-source tools for statistical signal analysis adopted internationally.</li>
-        </ul>
-        <h3 class="small" style="font-weight:700;color:#000;margin:12px 0 6px;">Recognition</h3>
-        <ul>
-          <li>NASA Earth &amp; Space Science Fellowship (2016–2019).</li>
-          <li>NSF EAPSI Fellowship (2015); JSPS Fellowship (2015).</li>
-        </ul>
-      </div>
-    </div>
+    <h2 class="section-header">CONFERENCE ACTIVITY</h2>
+    <h3 class="small" style="font-weight:700;color:#000;margin:0 0 6px;">Papers</h3>
+    <ul>
+      <li>“Emissions characterization and Smoke Transport of a Prescribed Fire.” (co-author) Presented by Zhining Tao (UMD) at the 104th Annual American Meteorological Society Meeting (2024).</li>
+      <li>“Low-latency forecasting framework for assessing ENSO impacts on terrestrial carbon cycle.” (co-author) Presented by C. Quinn (NASA) at EGU General Assembly (2024).</li>
+      <li>“Near-real time land-surface modeling to enable analysis-ready GHG monitoring.” (co-author) Presented by T. Colligan (NASA) at AGU Fall Meeting (2023).</li>
+      <li>“Integrating remotely-sensed functional diversity with a dynamic vegetation model to project forest responses to climate change at continental scales.” (co-author) Presented by A. Baresch at AGU Fall Meeting (2023).</li>
+      <li>“Exploring global 13C and 14C budgets with the LPJ dynamic vegetation model.” (co-author) Presented by B. Fischer-Femal (NASA) at AGU Fall Meeting (2023).</li>
+      <li>“Wringing moisture out of Deep Learning.” L. Calle. Ecological Society of America Annual Conference (2020).</li>
+      <li>“Forest Age as a Driver of Global Carbon-Climate Feedbacks.” (co-author) Presented by Dr. Benjamin Poulter at the Chapman Conference on Understanding Carbon Climate Feedbacks (2019).</li>
+      <li>“An Integrated framework greenhouse gas satellites and forest structure remote sensing to estimate emissions from land use, land use change and forestry (LULUCF).” (co-author) Presented by Dr. Benjamin Poulter at ForestSAT Conference, Washington, D.C. (2018).</li>
+      <li>“Segment-based signal characteristics of satellite-derived XCO<sub>2</sub> seasonal cycles.” Asia Oceania Geosciences Society 15th Annual Meeting, Honolulu, Hawaii (2018).</li>
+      <li>“Plant regrowth as a driver of recent enhancement of terrestrial CO<sub>2</sub> uptake.” (co-author) Presented by Dr. Masayuki Kondo at the Asia Oceania Geosciences Society 15th Annual Meeting, Honolulu, Hawaii (2018).</li>
+      <li>“Investigating the potential role of evergreen and deciduous forests in the increasing trend in atmospheric CO<sub>2</sub> seasonal amplitude.” (co-author) Presented by Dr. Lisa Welp at AGU Annual Conference (2017).</li>
+      <li>“Process attribution of observation–model error via time-series segmentation analysis.” 10th Intl. Carbon Dioxide Conference, Bern, Switzerland (2017).</li>
+      <li>“Process attribution of observation–model error via time-series segmentation analysis.” Japan Geoscience Union – American Geophysical Union Joint Annual Conference, Chiba, Japan (2017).</li>
+      <li>“Epistemic uncertainties in global-scale modeling of secondary forest dynamics.” Special Session on Mathematical Modeling of Forest and Landscape Change, American Mathematical Society Regional Conference, Pullman, WA (2017).</li>
+      <li>“Enabling teleconnection-based seasonal forecasts of global terrestrial carbon cycle dynamics.” (co-author) Presented by Dr. Benjamin Poulter at the 10th Intl. Carbon Dioxide Conference, Bern, Switzerland (2017).</li>
+      <li>“An empirical spatiotemporal description of the global surface-atmosphere carbon fluxes: opportunities and data limitations.” (co-author) Presented by Dr. Jakob Zscheischler at the 10th Intl. Carbon Dioxide Conference, Bern, Switzerland (2017).</li>
+      <li>“Decadal carbon balance shifts controlled by land use change and ENSO in Southeast Asia.” (co-author) Presented by Dr. Masayuki Kondo at the 10th Intl. Carbon Dioxide Conference, Bern, Switzerland (2017).</li>
+      <li>“Regional trends in land use and land cover change emissions in Asia.” (co-author) Presented by Dr. Prabir K. Patra at the NASA Land Cover and Land Use Change Meeting, Yangon, Burma (2016).</li>
+      <li>“A litter perspective on ecosystem demography in a dynamic global vegetation model.” Ecological Society of America Annual Conference (2016).</li>
+      <li>“Changes in atmospheric composition and land–atmosphere interactions across the Asian Region.” (co-author) Presented by Dr. Stephen Sitch at AsiaFlux International Conference, Pune, India (2015).</li>
+      <li>“Moon phase and habitat availability drives the foraging abundance of wading birds in intertidal zones.” AFO-WOS Annual Conference (2014), Everglades National Park (2014).</li>
+      <li>“Predicted changes in foraging habitat of the Little Blue Heron (<em>Egretta caerulea</em>) in the Great White Heron National Wildlife Refuge, FL, USA, as a function of sea level rise.” Ecological Society of America (2012), North American Ornithological Conference, Vancouver (2012).</li>
+    </ul>
   </section>
 
+  <!-- WORKSHOPS -->
   <section class="section">
-    <h2 class="section-header">CORE COMPETENCIES</h2>
-    <ul class="taglist">
-      <li>Algorithm Requirements &amp; Design</li>
-      <li>Data Curation &amp; Pipelines</li>
-      <li>Model Validation &amp; Monitoring</li>
-      <li>Testing Frameworks &amp; Docs</li>
-      <li>Performance Optimization</li>
-      <li>Stakeholder Communication</li>
-      <li>Mentorship &amp; Team Leadership</li>
+    <h2 class="section-header">PROFESSIONAL WORKSHOPS ORGANIZED &amp; CO-ORGANIZED</h2>
+    <ul>
+      <li>“The lefts, rights, ups, and downs that created a successful career in ecology.” Ecological Society of America Annual Conference, New Orleans (2018).</li>
+      <li>“Demystifying the media: communicating your science with the press.” Ecological Society of America Annual Conference, New Orleans (2018).</li>
+      <li>“Maximize your 2018 meeting experience: orientation and networking for student attendees.” Ecological Society of America Annual Conference, New Orleans (2018).</li>
+      <li>“Preparation for a career in ecology with career panel.” Dept. of Ecology, Montana State University (2017).</li>
+      <li>“A Multi-criteria decision analysis tool for resource prioritization.” Breakout Session at The Wildlife Society of Florida Spring Conference (2014).</li>
+      <li>“A Tidal Model of Shallow-water Availability (TiMSA) for coastal-foraging wading birds.” Wading Bird Modeling Workshop, Everglades National Park (2013).</li>
     </ul>
   </section>
 </body>
 </html>
+
