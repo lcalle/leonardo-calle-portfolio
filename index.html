@@ -342,6 +342,93 @@
             opacity: 0.6;
         }
         
+        /* Research Themes Section */
+        .research {
+            padding: 6rem 2rem;
+            background: #fff;
+        }
+
+        .research-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .themes-list {
+            margin-bottom: 5rem;
+        }
+
+        .theme-row {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid #e5e5e5;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            align-items: baseline;
+        }
+
+        .theme-name {
+            font-weight: 600;
+            color: #000;
+            font-size: 1.05rem;
+        }
+
+        .theme-desc {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .pubs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .pubs-col h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #000;
+        }
+
+        .pub-item {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .pub-journal {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .pub-title {
+            color: #555;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .journal-list {
+            list-style: none;
+            columns: 1;
+        }
+
+        .journal-list li {
+            color: #333;
+            padding: 0.2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .pubs-cv-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #000;
+        }
+
+        .pubs-cv-link:hover { opacity: 0.6; }
+
         /* Bio Section */
         .bio {
             padding: 6rem 2rem;
@@ -468,6 +555,20 @@
             .bio-stats {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .theme-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .pubs-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .research {
+                padding: 4rem 1rem;
+            }
         }
     </style>
 </head>
@@ -478,8 +579,9 @@
             <a href="#" class="logo">LC</a>
             <ul class="nav-links">
                 <li><a href="#about">about</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#bio">research</a></li>
+                <li><a href="#research">research</a></li>
+                <li><a href="#portfolio">ventures</a></li>
+                <li><a href="#bio">impact</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
             <div class="social-links">
@@ -496,7 +598,7 @@
         <div class="hero-content">
             <div class="hero-label">scientist</div>
             <h1 class="hero-title">Leonardo Calle, Ph.D.</h1>
-            <p class="hero-subtitle">Ph.D. scientist-entrepreneur developing technology solutions for ecological decision-making, scientific workforce analytics, and artistic expression.</p>
+            <p class="hero-subtitle">Earth system scientist (Ph.D.) with 30+ publications, building AI-powered tools for ecological decision-making, scientific workforce analytics, and creative expression.</p>
             <div class="bio-dropdown">
                 <a href="#" class="bio-toggle" onclick="toggleBio(event)">Read Full Bio ↓</a>
                 <a href="leonardo_calle_cv.html" class="bio-toggle" target="_blank" style="margin-left: 10px;">View Resume</a>
@@ -512,6 +614,26 @@
         
         <div class="hero-image">
             <img src="hero-portrait.png" alt="Leonardo Calle" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+        </div>
+    </section>
+
+    <!-- Scientist Section -->
+    <section class="hero-alt">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">&lt;scientist&gt;</div>
+                <h2 class="hero-title">Researcher</h2>
+                <p class="hero-subtitle">Earth system scientist developing physics-informed machine learning and ecosystem models, from global carbon dynamics to coastal habitat risk.</p>
+            </div>
+
+            <div class="code-block">
+const research = {<br>
+&nbsp;&nbsp;domain: "Earth System Science",<br>
+&nbsp;&nbsp;methods: ["Deep Learning", "Ecosystem Modeling", "Remote Sensing"],<br>
+&nbsp;&nbsp;affiliations: ["NASA-GSFC", "Montana State", "TAMUCC"],<br>
+&nbsp;&nbsp;output: "30+ peer-reviewed publications"<br>
+};
+            </div>
         </div>
     </section>
 
@@ -531,6 +653,87 @@ const impact = {<br>
 &nbsp;&nbsp;mission: "climate.solve()",<br>
 &nbsp;&nbsp;focus: ["AI/ML", "Earth Systems", "Innovation"]<br>
 };
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Themes Section -->
+    <section class="research" id="research">
+        <div class="research-container">
+            <div class="section-header">
+                <div class="section-title">Science</div>
+                <h2 class="section-heading">Research Themes &amp; Contributions</h2>
+            </div>
+
+            <div class="themes-list">
+                <div class="theme-row">
+                    <div class="theme-name">Earth System &amp; Carbon Modeling</div>
+                    <div class="theme-desc">Integrating forest demography (age/size structure) into global models and reconciling top-down/bottom-up terrestrial carbon budgets.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Land Use &amp; Climate Teleconnections</div>
+                    <div class="theme-desc">Quantifying how historical land-use changes and global climate drivers (like ENSO) shift regional carbon and methane fluxes.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Time-Series &amp; Signal Processing</div>
+                    <div class="theme-desc">Developing segmentation algorithms to decode complex seasonal environmental data and isolate model biases.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Remote Sensing Synthesis</div>
+                    <div class="theme-desc">Fusing multi-sensor satellite data (LiDAR, optical) to track large-scale forest regrowth and shifting vegetation baselines.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Ecohydrology &amp; Habitat Phenology</div>
+                    <div class="theme-desc">Modeling physical environmental constraints (e.g., water availability, tidal cycles) as dynamic filters for species behavior and habitat viability.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Behavioral &amp; Coastal Ecology</div>
+                    <div class="theme-desc">Analyzing how nutrient availability, physical constraints, and human subsidies influence animal foraging and distribution in coastal zones.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Theoretical &amp; Evolutionary Ecology</div>
+                    <div class="theme-desc">Investigating broad conceptual frameworks like evolutionary bet-hedging and the spatial dynamics of positive species interactions.</div>
+                </div>
+                <div class="theme-row">
+                    <div class="theme-name">Disciplinary Leadership &amp; Mentorship</div>
+                    <div class="theme-desc">Advancing the field of ecology through student mentorship frameworks, career path structural analysis, and science communication.</div>
+                </div>
+            </div>
+
+            <div class="pubs-grid">
+                <div class="pubs-col">
+                    <h3>Selected 1st-Author Publications</h3>
+                    <div class="pub-item"><span class="pub-journal">Ecological Monographs</span> — <span class="pub-title">Time-integrated habitat availability is a resource attribute that informs patterns of use in intertidal areas</span></div>
+                    <div class="pub-item"><span class="pub-journal">Geoscientific Model Development</span> — <span class="pub-title">Ecosystem age-class dynamics and distribution in the LPJ-wsl v2.0 global ecosystem model</span></div>
+                    <div class="pub-item"><span class="pub-journal">Environmental Research Letters</span> — <span class="pub-title">Regional carbon fluxes from land use and land cover change in Asia, 1980–2009</span></div>
+                    <div class="pub-item"><span class="pub-journal">Atmospheric Measurement Techniques</span> — <span class="pub-title">A segmentation algorithm for characterizing rise and fall segments in seasonal cycles</span></div>
+                    <a href="leonardo_calle_cv.html" class="pubs-cv-link" target="_blank">View full CV &amp; publication list →</a>
+                </div>
+                <div class="pubs-col">
+                    <h3>Published Across</h3>
+                    <ul class="journal-list">
+                        <li>Aquatic Botany</li>
+                        <li>Atmospheric Measurement Techniques</li>
+                        <li>Biogeosciences</li>
+                        <li>Bulletin of the Ecological Society of America</li>
+                        <li>Ecological Monographs</li>
+                        <li>Ecology and Evolution</li>
+                        <li>Ecology Letters</li>
+                        <li>Ecological Indicators</li>
+                        <li>Ecosphere</li>
+                        <li>Environmental Research Letters</li>
+                        <li>Fish and Fisheries</li>
+                        <li>Florida Field Naturalist</li>
+                        <li>Geoscientific Model Development</li>
+                        <li>Geophysical Research Letters</li>
+                        <li>Global Change Biology</li>
+                        <li>J. of Geophysical Research: Biogeosciences</li>
+                        <li>Nature Communications</li>
+                        <li>Nature Geoscience</li>
+                        <li>PNAS</li>
+                        <li>The Auk: Ornithological Advances</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -577,6 +780,33 @@ const impact = {<br>
                         <div class="portfolio-category">Art Studio & Design</div>
                         <p class="portfolio-description">My art studio, where I specialize in blue pen drawings and custom murals that invite people to see the world from new perspectives—creating original works, prints, and wall art that challenge perception and foster human connection through accessible, transformative art.</p>
                         <a href="https://calle-arte.com/drawings/" class="portfolio-link">View Gallery</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="simul-preview.png" alt="simul.watch" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="portfolio-image-placeholder">simul.watch</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">simul.watch</h3>
+                        <div class="portfolio-category">Browser Extension · Real-Time Sync</div>
+                        <p class="portfolio-description">A privacy-first, frame-perfect video sync engine for watching together across Netflix, Disney+, YouTube, and more — built on client-side AES-GCM encryption and a zero-persistence architecture.</p>
+                        <a href="https://simul.watch" class="portfolio-link" target="_blank">Visit Site</a>
+                        <a href="https://github.com/lcalle/simul-extension" class="portfolio-link" target="_blank" style="margin-left: 1rem;">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="dashboard-preview.png" alt="Overwash Risk Dashboard" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="portfolio-image-placeholder">Overwash Risk Dashboard</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Overwash Risk Dashboard</h3>
+                        <div class="portfolio-category">Science Tool · Coastal Risk</div>
+                        <p class="portfolio-description">Interactive dashboard for coastal overwash risk on Texas waterbird nesting islands — GAM/Shapley analytics, storm-event decomposition, and sea-level-rise scenarios.</p>
+                        <a href="https://ow.calleecology.com" class="portfolio-link" target="_blank">Launch Dashboard</a>
                     </div>
                 </div>
             </div>
