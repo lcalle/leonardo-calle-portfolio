@@ -377,6 +377,11 @@
             line-height: 1.6;
         }
 
+        /* research-theme label colors (placed after .theme-name so they win) */
+        .theme-name.theme-red   { color: #c0392b; }  /* brick red */
+        .theme-name.theme-blue  { color: #1d4ed8; }  /* strong blue */
+        .theme-name.theme-green { color: #2e7d32; }  /* forest green, white-bg legible */
+
         .pubs-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -673,27 +678,27 @@ const impact = {<br>
                     <div class="theme-desc">Quantifying how historical land-use changes and global climate drivers (like ENSO) shift regional carbon and methane fluxes.</div>
                 </div>
                 <div class="theme-row">
-                    <div class="theme-name">Time-Series &amp; Signal Processing</div>
+                    <div class="theme-name theme-red">Time-Series &amp; Signal Processing</div>
                     <div class="theme-desc">Developing segmentation algorithms to decode complex seasonal environmental data and isolate model biases.</div>
                 </div>
                 <div class="theme-row">
-                    <div class="theme-name">Remote Sensing Synthesis</div>
+                    <div class="theme-name theme-red">Remote Sensing Synthesis</div>
                     <div class="theme-desc">Fusing multi-sensor satellite data (LiDAR, optical) to track large-scale forest regrowth and shifting vegetation baselines.</div>
                 </div>
                 <div class="theme-row">
-                    <div class="theme-name">Ecohydrology &amp; Habitat Phenology</div>
+                    <div class="theme-name theme-blue">Ecohydrology &amp; Habitat Phenology</div>
                     <div class="theme-desc">Modeling physical environmental constraints (e.g., water availability, tidal cycles) as dynamic filters for species behavior and habitat viability.</div>
                 </div>
                 <div class="theme-row">
-                    <div class="theme-name">Behavioral &amp; Coastal Ecology</div>
+                    <div class="theme-name theme-blue">Behavioral &amp; Coastal Ecology</div>
                     <div class="theme-desc">Analyzing how nutrient availability, physical constraints, and human subsidies influence animal foraging and distribution in coastal zones.</div>
                 </div>
                 <div class="theme-row">
-                    <div class="theme-name">Theoretical &amp; Evolutionary Ecology</div>
+                    <div class="theme-name theme-green">Theoretical &amp; Evolutionary Ecology</div>
                     <div class="theme-desc">Investigating broad conceptual frameworks like evolutionary bet-hedging and the spatial dynamics of positive species interactions.</div>
                 </div>
                 <div class="theme-row">
-                    <div class="theme-name">Disciplinary Leadership &amp; Mentorship</div>
+                    <div class="theme-name theme-green">Disciplinary Leadership &amp; Mentorship</div>
                     <div class="theme-desc">Advancing the field of ecology through student mentorship frameworks, career path structural analysis, and science communication.</div>
                 </div>
             </div>
